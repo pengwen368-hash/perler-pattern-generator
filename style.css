@@ -365,3 +365,71 @@ canvas {
 canvas {
   image-rendering: pixelated;
 }
+/* ===== 灿灿拼豆：樱花粉按钮美化 ===== */
+
+/* 普通按钮 */
+button {
+  border: 1px solid #f0d3e0;
+  border-radius: 12px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* 普通按钮悬停 */
+button:hover {
+  border-color: #e8a6c1;
+  box-shadow: 0 4px 12px rgba(214, 133, 171, 0.15);
+}
+
+/* 按钮按下的反馈 */
+button:active {
+  transform: scale(0.98);
+}
+
+/* 粉色主按钮 */
+button.bg-primary,
+button.bg-pink-500,
+button.bg-pink-600 {
+  background-color: #e98db2;
+  border-color: #e98db2;
+  color: #ffffff;
+}
+
+/* 粉色主按钮悬停 */
+button.bg-primary:hover,
+button.bg-pink-500:hover,
+button.bg-pink-600:hover {
+  background-color: #dc79a2;
+  border-color: #dc79a2;
+}
+
+/* 浅粉色次要按钮 */
+button.bg-pink-50,
+button.bg-pink-100 {
+  background-color: #fff0f6;
+  color: #995b79;
+}
+
+/* 灰色按钮柔和化 */
+button.bg-gray-100,
+button.bg-gray-200 {
+  background-color: #f8f3f7;
+  color: #705d6d;
+}
+
+/* 按钮文字 */
+button {
+  font-weight: 500;
+}
+
+/* 手机端按钮不要太拥挤 */
+@media (max-width: 640px) {
+  button {
+    min-height: 38px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
