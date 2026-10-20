@@ -219,3 +219,48 @@ input[type="radio"] {
     min-height: 38px;
   }
 }
+/* ===== 灿灿拼豆：上传图片区域美化 ===== */
+
+#dropzone {
+  background: linear-gradient(135deg, #fff4f8 0%, #f7f1ff 100%);
+  border: 2px dashed #e9a5c0;
+  border-radius: 20px;
+  padding: 36px 20px;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+/* 鼠标悬停时的效果 */
+#dropzone:hover {
+  background: linear-gradient(135deg, #ffeaf2 0%, #eee5ff 100%);
+  border-color: #d88eb2;
+}
+
+/* 上传提示文字 */
+#dropzone p.text-sm {
+  color: #8b5876;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#dropzone p.text-xs {
+  color: #a58ba4;
+  margin-top: 8px;
+}
+
+/* 上传区域中的图标 */
+#dropzone > div > div:first-child {
+  color: #d98eb5;
+  margin-bottom: 8px;
+}
+
+#dropzone svg {
+  color: #d98eb5;
+}
+
+/* 上传区域在手机上保持舒适间距 */
+@media (max-width: 640px) {
+  #dropzone {
+    padding: 28px 14px;
+    border-radius: 16px;
+  }
+}
