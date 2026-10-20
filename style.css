@@ -433,3 +433,58 @@ button {
     padding-right: 12px;
   }
 }
+/* ===== 灿灿拼豆：颜色统计表美化 ===== */
+
+/* 表格整体 */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #f0dce6;
+  border-radius: 14px;
+  background: #fffdfd;
+}
+
+/* 表头 */
+table thead th {
+  background: #fff0f6;
+  color: #875b78;
+  font-weight: 600;
+  border-bottom: 1px solid #f0dce6;
+  padding: 10px 8px;
+}
+
+/* 表格内容 */
+table tbody td {
+  padding: 9px 8px;
+  border-bottom: 1px solid #f7eaf0;
+  color: #685767;
+}
+
+/* 隔行浅色 */
+table tbody tr:nth-child(even) {
+  background: #fff9fc;
+}
+
+/* 鼠标悬停 */
+table tbody tr:hover {
+  background: #fff0f6;
+}
+
+/* 最后一行去掉底部边框 */
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 手机端表格 */
+@media (max-width: 640px) {
+  table {
+    font-size: 12px;
+  }
+
+  table thead th,
+  table tbody td {
+    padding: 7px 5px;
+  }
+}
