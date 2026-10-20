@@ -319,7 +319,7 @@ function updateSetting(key, value) {
     }
     
     // Update UI labels
-    if (key === 'width') elements.widthVal.textContent = value;
+    if (key === 'width') elements.widthVal.textContent = `${value}×${value}`;
     if (key === 'brightness') elements.brightnessVal.textContent = value > 0 ? `+${value}` : value;
     if (key === 'contrast') elements.contrastVal.textContent = value > 0 ? `+${value}` : value;
     if (key === 'saturation') elements.saturationVal.textContent = value > 0 ? `+${value}` : value;
