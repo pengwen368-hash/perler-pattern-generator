@@ -384,11 +384,27 @@ function processImage() {
     if (!state.originalImage) return;
 
     const { width, palette, brightness, contrast, saturation, dithering, matchMode, autoEnhance } = state.settings;
-    const img = state.originalImage;
-    
-    // Calculate aspect ratio and new height
-    const aspectRatio = img.height / img.width;
-    const height = Math.round(width * aspectRatio);
+   
+const originalImg = state.originalImage;
+
+// Crop the image to a square before processing
+const cropSize = Math.min(originalImg.width, originalImg.height);
+const cropX = (originalImg.width - cropSize) / 2;
+const cropY = (originalImg.height - cropSize) / 2;
+
+const cropCanvas = document.createElement('canvas');
+cropCanvas.width = cropSize;
+cropCanvas.height = cropSize;
+
+const cropCtx = cropCanvas.getContext('2d');
+cropCtx.drawImage(
+    originalImg,
+    cropX, cropY, cropSize, cropSize,
+    0, 0, cropSize, cropSize
+);
+
+const img = cropCanvas;
+const height = width;
     
     // Clear mask if dimensions changed
     if (state.lastWidth !== width || state.lastHeight !== height) {
