@@ -401,6 +401,24 @@
 
     <script src="colors.js?v=20261001-palettes"></script>
     <script src="app.js?v=20261001-palettes"></script>
+    
+<script>
+document.querySelectorAll('.palette-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        document.querySelectorAll('.palette-card').forEach(function(item) {
+            item.classList.remove('border-pink-400', 'bg-pink-50');
+            item.classList.add('border-gray-200');
+            item.querySelector('span').classList.remove('text-pink-600');
+            item.querySelector('span').classList.add('text-gray-700');
+        });
+
+        card.classList.remove('border-gray-200');
+        card.classList.add('border-pink-400', 'bg-pink-50');
+        card.querySelector('span').classList.remove('text-gray-700');
+        card.querySelector('span').classList.add('text-pink-600');
+    });
+});
+</script>
 </body>
     
 <!-- 灿灿拼豆：网站底部 -->
