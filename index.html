@@ -57,17 +57,28 @@
                         2. 调整参数
                     </h2>
                     
-                    <!-- Width Control -->
-                    <div class="mb-5">
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
-                            宽度 (豆粒数): <span id="widthVal" class="text-primary font-bold">50</span>
-                        </label>
-                        <input type="range" id="widthRange" min="20" max="150" value="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
-                        <div class="flex justify-between text-xs text-gray-400 mt-1">
-                            <span>20</span>
-                            <span class="text-xs text-gray-500">提示: 增加宽度可提升细节还原度</span>
-                            <span>150</span>
-                        </div>
+                   
+<!-- Width Control -->
+<div class="mb-5">
+    <label class="block text-sm font-medium text-gray-700 mb-2">
+        拼豆尺寸：
+        <span id="widthVal" class="text-primary font-bold">50×50</span>
+    </label>
+    <select id="widthRange" class="w-full border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 p-2 border">
+        <option value="16">16×16</option>
+        <option value="26">26×26</option>
+        <option value="32">32×32</option>
+        <option value="50" selected>50×50</option>
+        <option value="52">52×52</option>
+        <option value="64">64×64</option>
+        <option value="78">78×78</option>
+        <option value="100">100×100</option>
+        <option value="104">104×104</option>
+    </select>
+    <p class="text-xs text-gray-500 mt-1">
+        尺寸越大，细节通常越丰富，所需拼豆也越多。
+    </p>
+</div>
                     </div>
 
                     <!-- Palette Selection -->
