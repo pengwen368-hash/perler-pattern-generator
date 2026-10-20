@@ -329,3 +329,39 @@ input[type="radio"] {
     font-size: 14px;
   }
 }
+/* ===== 灿灿拼豆：图纸预览区域美化 ===== */
+
+/* 预览画布外围 */
+canvas {
+  border-radius: 12px;
+}
+
+/* 预览相关的白色面板 */
+#previewSection,
+#resultSection,
+#previewContainer,
+#canvasContainer {
+  background: linear-gradient(145deg, #fffafd 0%, #fff3f8 100%);
+  border: 1px solid #f1dce7;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(190, 125, 160, 0.06);
+}
+
+/* 预览区域里的标题 */
+#previewSection h2,
+#resultSection h2,
+#previewContainer h2,
+#canvasContainer h2 {
+  color: #875b78;
+}
+
+/* 让画布在手机上正常显示 */
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 拼豆图纸保持清晰，不额外添加滤镜 */
+canvas {
+  image-rendering: pixelated;
+}
