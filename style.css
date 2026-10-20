@@ -264,3 +264,68 @@ input[type="radio"] {
     border-radius: 16px;
   }
 }
+/* ===== 灿灿拼豆：参数设置区域美化 ===== */
+
+#controlsSection {
+  background: linear-gradient(145deg, #ffffff 0%, #fff8fb 100%);
+  border: 1px solid #f1dce7;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(190, 125, 160, 0.07);
+}
+
+/* 参数区标题 */
+#controlsSection h2 {
+  color: #875b78;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f5e3ec;
+}
+
+/* 参数区的文字 */
+#controlsSection label {
+  color: #745c70;
+}
+
+/* 下拉选择框 */
+#controlsSection select {
+  width: 100%;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #efd5e2;
+  border-radius: 12px;
+  background-color: #fffafd;
+}
+
+/* 数值输入框 */
+#controlsSection input:not([type="range"]):not([type="checkbox"]):not([type="radio"]) {
+  border: 1px solid #efd5e2;
+  border-radius: 10px;
+  background-color: #fffafd;
+}
+
+/* 参数滑块 */
+#controlsSection input[type="range"] {
+  accent-color: #e78eb1;
+}
+
+/* 复选框 */
+#controlsSection input[type="checkbox"] {
+  accent-color: #e78eb1;
+}
+
+/* 参数区内的按钮 */
+#controlsSection button {
+  border-radius: 12px;
+}
+
+/* 手机端避免设置项撑出屏幕 */
+@media (max-width: 640px) {
+  #controlsSection {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  #controlsSection select {
+    font-size: 14px;
+  }
+}
